@@ -1,0 +1,100 @@
+/* Bold Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+h1.elHeadline b, h2.elHeadline b { font-weight: 700; }
+
+/* Responsive Font Sizes */
+[data-title*='responsiveTxt1'] .elHeadline { font-size: 1vw !important; }
+[data-title*='responsiveTxt1.5'] .elHeadline { font-size: 1.5vw !important; }
+[data-title*='responsiveTxt2'] .elHeadline { font-size: 2vw !important; }
+[data-title*='responsiveTxt2.5'] .elHeadline { font-size: 2.5vw !important; }
+[data-title*='responsiveTxt3'] .elHeadline { font-size: 3vw !important; }
+[data-title*='responsiveTxt3.5'] .elHeadline { font-size: 3.5vw !important; }
+[data-title*='responsiveTxt4'] .elHeadline { font-size: 4vw !important; }
+[data-title*='responsiveTxt4.5'] .elHeadline { font-size: 4.5vw !important; }
+.mobileViewer [data-title*='responsiveTxt1'] .elHeadline, .mobileViewer [data-title*='responsiveTxt1.5'] .elHeadline, .mobileViewer [data-title*='responsiveTxt2'] .elHeadline, .mobileViewer [data-title*='responsiveTxt2.5'] .elHeadline, .mobileViewer [data-title*='responsiveTxt3'] .elHeadline, .mobileViewer [data-title*='responsiveTxt3.5'] .elHeadline, .mobileViewer [data-title*='responsiveTxt4'] .elHeadline, .mobileViewer [data-title*='responsiveTxt4.5'] .elHeadline { font-size: x-large !important; }
+@media only screen and (max-width: 770px) {
+  [data-title*='responsiveTxt1'] .elHeadline { font-size: 3vw !important; }
+  [data-title*='responsiveTxt1.5'] .elHeadline { font-size: 3.5vw !important; }
+  [data-title*='responsiveTxt2'] .elHeadline { font-size: 4vw !important; }
+  [data-title*='responsiveTxt2.5'] .elHeadline { font-size: 5vw !important; }
+  [data-title*='responsiveTxt3'] .elHeadline { font-size: 6vw !important; }
+  [data-title*='responsiveTxt3.5'] .elHeadline { font-size: 7vw !important; }
+  [data-title*='responsiveTxt4'] .elHeadline { font-size: 8vw !important; }
+  [data-title*='responsiveTxt4.5'] .elHeadline { font-size: 9vw !important; }
+}
+
+/* Section Widths */
+[data-title*='section100'] .containerInner { width: 100%; }
+[data-title*='section80'] .containerInner { width: 80%; }
+[data-title*='section85'] .containerInner { width: 85%; }
+[data-title*='section90'] .containerInner { width: 90%; }
+[data-title*='section95'] .containerInner { width: 95%; }
+
+/* Remove The Extra Padding From Columns */
+[data-title*='noPadding'] { padding: 0; }
+
+/* Flex Container -- Centers content vertically in columns  */
+[data-title*='flexContainer'] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mobileViewer [data-title*='flexContainer'] { display: block; }
+@media only screen and (max-width: 770px) {
+  [data-title*='flexContainer'] { display: block; }
+}
+
+/* Full Size BG Image on Column */
+[data-title*='fullBG'] .col-inner {
+  min-height: calc(100vh - 91px); /* subtract height of header */
+  background-position: center center;
+  background-size: cover;
+}
+.mobileViewer [data-title*='fullBG'] .col-inner { min-height: 200px; }
+@media only screen and (max-width: 770px) {
+  [data-title*='fullBG'] .col-inner { min-height: 200px; }
+}
+
+/* Clean Drop Shadow */
+[data-title*='dropShadow'] {
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  -mozbox-box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
+
+/* Center Text on Mobile */
+.mobileViewer .elHeadline, .mobileViewer p { text-align: center !important; }
+@media only screen and (max-width: 770px) {
+  .elHeadline, p { text-align: center !important; }
+}
+
+/* Change Popup Exit Button */
+.closeLPModal img { display: none; }
+.closeLPModal {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  right: -15px;
+  top: -15px;
+}
+.closeLPModal:before {
+  position: absolute;
+  content: '✖';
+  font-weight: 100;
+  width: 30px;
+  text-align: center;
+  font-size: 18px;
+  top: 2.5px;
+  color: #a7a7a7;
+}
+@media only screen and (max-width: 770px) { 
+  .mobileViewer .col-sm-push-6 {
+    left: 0;
+  }
+  .mobileViewer .col-sm-pull-6 {
+    right: 0;
+  }
+  .closeLPModal { right: 2px; }
+}
