@@ -93,7 +93,7 @@ h1.elHeadline b, h2.elHeadline b { font-weight: 700; }
   .closeLPModal { right: 2px; }
 }
 
-@media (max-width: 770px) {
+@media (min-width: 770px) {
   .mobileViewer .col-sm-push-6 {
     left: 0;
   }
